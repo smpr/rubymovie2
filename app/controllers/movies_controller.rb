@@ -32,14 +32,14 @@ class MoviesController < ApplicationController
     end
 
     def destroy
-        Movir.destroy(params[:id])
+        MoviesController.destroy(params[:id])
         redirect_to movies_path
     end
 
     
     private
 
-    def movir_params
-        params.require(:movie).permit(:title, :nationality, :photo_url)
+    def movie_params
+        params.require(:movie).permit(:title, :year, :photo, :genre, :synopis)
     end
 end

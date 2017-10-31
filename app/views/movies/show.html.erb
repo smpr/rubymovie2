@@ -1,1 +1,8 @@
 <h1>Show Page</h1>
+<h1><%= @movie.title %></h1>
+<div><%= button_to "Delete Movie", @movie, :method => :delete %></div>
+<div><%= button_to "Edit Movie", edit_movie_path(@movie), :method => :get %></div>
+<p><b>Genre: </b><%= @movie.genre %></p>
+<p><b>Year: </b><%= @movie.year %></p>
+<p><b>Synopis: </b><%= @movie.synopis %></p>
+<p><b>Picture: </b><%= @movie.picture %></p>
